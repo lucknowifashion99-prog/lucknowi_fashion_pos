@@ -19,12 +19,15 @@ class DatabaseHelper {
     final dbPath = await getDatabasesPath();
     final path = join(dbPath, 'lucknowi_fashion.db');
 
+    // 👇 DEVELOPMENT ONLY
+    // Purana database delete hoga aur naya create hoga.
+    await deleteDatabase(path);
+
     return await openDatabase(
       path,
       version: 2,
       onConfigure: _onConfigure,
       onCreate: _onCreate,
-      onUpgrade: _onUpgrade,
     );
   }
 
@@ -37,14 +40,6 @@ class DatabaseHelper {
     await _createBrandsTable(db);
     await _createProductsTable(db);
     await _createProductVariantsTable(db);
-  }
-
-  Future<void> _onUpgrade(
-      Database db,
-      int oldVersion,
-      int newVersion,
-      ) async {
-    // Future database migrations yahan likhenge.
   }
 
   Future<void> _createCategoriesTable(Database db) async {

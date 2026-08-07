@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'theme/app_theme.dart';
-import 'screens/splash/splash_screen.dart';
+import 'features/dashboard/dashboard_screen.dart';
 
 class LucknowiFashionApp extends StatelessWidget {
   const LucknowiFashionApp({super.key});
@@ -12,7 +12,7 @@ class LucknowiFashionApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Lucknowi Fashion POS',
       theme: AppTheme.lightTheme,
-      home: const SplashScreen(),
+      home: const DashboardScreen(),
     );
   }
 }
