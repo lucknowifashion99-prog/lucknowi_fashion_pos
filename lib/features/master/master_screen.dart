@@ -1,5 +1,7 @@
-import 'category/category_screen.dart';
 import 'package:flutter/material.dart';
+
+import 'category/category_screen.dart';
+import 'brand/brand_screen.dart';
 
 class MasterScreen extends StatelessWidget {
   const MasterScreen({super.key});
@@ -27,7 +29,11 @@ class MasterScreen extends StatelessWidget {
               CircleAvatar(
                 radius: 28,
                 backgroundColor: color.withValues(alpha: 0.15),
-                child: Icon(icon, color: color, size: 30),
+                child: Icon(
+                  icon,
+                  color: color,
+                  size: 30,
+                ),
               ),
               const SizedBox(height: 12),
               Text(
@@ -58,7 +64,7 @@ class MasterScreen extends StatelessWidget {
           crossAxisSpacing: 14,
           mainAxisSpacing: 14,
           children: [
-
+            // Category
             menuCard(
               context,
               "Category",
@@ -74,44 +80,80 @@ class MasterScreen extends StatelessWidget {
               },
             ),
 
+            // Brand
             menuCard(
               context,
               "Brand",
               Icons.sell,
               Colors.orange,
-                  () {},
+                  () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => const BrandScreen(),
+                  ),
+                );
+              },
             ),
 
+            // Color
             menuCard(
               context,
               "Color",
               Icons.palette,
               Colors.purple,
-                  () {},
+                  () {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    content: Text("Color Module Coming Soon"),
+                  ),
+                );
+              },
             ),
 
+            // Size
             menuCard(
               context,
               "Size",
               Icons.straighten,
               Colors.green,
-                  () {},
+                  () {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    content: Text("Size Module Coming Soon"),
+                  ),
+                );
+              },
             ),
 
+            // Supplier
             menuCard(
               context,
               "Supplier",
               Icons.local_shipping,
               Colors.red,
-                  () {},
+                  () {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    content: Text("Supplier Module Coming Soon"),
+                  ),
+                );
+              },
             ),
 
+            // Customer
             menuCard(
               context,
               "Customer",
               Icons.people,
               Colors.teal,
-                  () {},
+                  () {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    content: Text("Customer Module Coming Soon"),
+                  ),
+                );
+              },
             ),
           ],
         ),
