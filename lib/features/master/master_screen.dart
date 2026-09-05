@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'category/category_screen.dart';
 import 'brand/brand_screen.dart';
+import 'color/color_screen.dart';
+import 'size/size_screen.dart';
+import 'supplier/supplier_screen.dart';
+import 'customer/customer_screen.dart';
 
 class MasterScreen extends StatelessWidget {
   const MasterScreen({super.key});
@@ -54,7 +58,7 @@ class MasterScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Master Data"),
+        title: const Text('Master Data'),
         centerTitle: true,
       ),
       body: Padding(
@@ -64,10 +68,12 @@ class MasterScreen extends StatelessWidget {
           crossAxisSpacing: 14,
           mainAxisSpacing: 14,
           children: [
-            // Category
+            // =========================
+            // CATEGORY
+            // =========================
             menuCard(
               context,
-              "Category",
+              'Category',
               Icons.category,
               Colors.blue,
                   () {
@@ -80,10 +86,12 @@ class MasterScreen extends StatelessWidget {
               },
             ),
 
-            // Brand
+            // =========================
+            // BRAND
+            // =========================
             menuCard(
               context,
-              "Brand",
+              'Brand',
               Icons.sell,
               Colors.orange,
                   () {
@@ -96,61 +104,73 @@ class MasterScreen extends StatelessWidget {
               },
             ),
 
-            // Color
+            // =========================
+            // COLOR
+            // =========================
             menuCard(
               context,
-              "Color",
+              'Color',
               Icons.palette,
               Colors.purple,
                   () {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(
-                    content: Text("Color Module Coming Soon"),
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => const ColorScreen(),
                   ),
                 );
               },
             ),
 
-            // Size
+            // =========================
+            // SIZE
+            // =========================
             menuCard(
               context,
-              "Size",
+              'Size',
               Icons.straighten,
               Colors.green,
                   () {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(
-                    content: Text("Size Module Coming Soon"),
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => const SizeScreen(),
                   ),
                 );
               },
             ),
 
-            // Supplier
+            // =========================
+            // SUPPLIER
+            // =========================
             menuCard(
               context,
-              "Supplier",
+              'Supplier',
               Icons.local_shipping,
               Colors.red,
                   () {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(
-                    content: Text("Supplier Module Coming Soon"),
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => const SupplierScreen(),
                   ),
                 );
               },
             ),
 
-            // Customer
+            // =========================
+            // CUSTOMER
+            // =========================
             menuCard(
               context,
-              "Customer",
+              'Customer',
               Icons.people,
               Colors.teal,
                   () {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(
-                    content: Text("Customer Module Coming Soon"),
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => const CustomerScreen(),
                   ),
                 );
               },

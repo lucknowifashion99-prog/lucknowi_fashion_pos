@@ -1,40 +1,40 @@
 class Product {
-  int? id;
-  String name;
-  String category;
-  String brand;
-  String size;
-  String color;
-  double purchasePrice;
-  double sellingPrice;
-  int stock;
-  String barcode;
+  final int? id;
+  final String name;
+  final int categoryId;
+  final int? brandId;
+  final String? department;
+  final String? hsn;
+  final double gst;
+  final String? description;
+  final String createdAt;
+  final String updatedAt;
 
   Product({
     this.id,
     required this.name,
-    required this.category,
-    required this.brand,
-    required this.size,
-    required this.color,
-    required this.purchasePrice,
-    required this.sellingPrice,
-    required this.stock,
-    required this.barcode,
+    required this.categoryId,
+    this.brandId,
+    this.department,
+    this.hsn,
+    required this.gst,
+    this.description,
+    required this.createdAt,
+    required this.updatedAt,
   });
 
   Map<String, dynamic> toMap() {
     return {
       'id': id,
       'name': name,
-      'category': category,
-      'brand': brand,
-      'size': size,
-      'color': color,
-      'purchasePrice': purchasePrice,
-      'sellingPrice': sellingPrice,
-      'stock': stock,
-      'barcode': barcode,
+      'categoryId': categoryId,
+      'brandId': brandId,
+      'department': department,
+      'hsn': hsn,
+      'gst': gst,
+      'description': description,
+      'createdAt': createdAt,
+      'updatedAt': updatedAt,
     };
   }
 
@@ -42,14 +42,14 @@ class Product {
     return Product(
       id: map['id'],
       name: map['name'],
-      category: map['category'],
-      brand: map['brand'],
-      size: map['size'],
-      color: map['color'],
-      purchasePrice: map['purchasePrice'],
-      sellingPrice: map['sellingPrice'],
-      stock: map['stock'],
-      barcode: map['barcode'],
+      categoryId: map['categoryId'],
+      brandId: map['brandId'],
+      department: map['department'],
+      hsn: map['hsn'],
+      gst: (map['gst'] as num?)?.toDouble() ?? 0.0,
+      description: map['description'],
+      createdAt: map['createdAt'],
+      updatedAt: map['updatedAt'],
     );
   }
 }

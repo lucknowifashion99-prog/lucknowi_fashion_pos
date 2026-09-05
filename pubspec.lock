@@ -41,14 +41,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.13"
-  blue_thermal_printer_plus:
-    dependency: "direct main"
-    description:
-      name: blue_thermal_printer_plus
-      sha256: b33e697adb7337fa6efe0b00e18adaf0d882275507d55c8ac05f819b661e3ed1
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.0.22"
   boolean_selector:
     dependency: transitive
     description:
@@ -105,6 +97,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.7"
+  csv_plus:
+    dependency: transitive
+    description:
+      name: csv_plus
+      sha256: b72e2cfd22cca6a058901feb075ec1abbb7c7dfd24b4c3d0e83188aa69dd1da5
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.5.0"
   cupertino_icons:
     dependency: "direct main"
     description:
@@ -121,6 +121,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.7.13"
+  excel_plus:
+    dependency: "direct main"
+    description:
+      name: excel_plus
+      sha256: "327fb1323ea10788104f69dc4b61102894bcd2e59f6dc400aa30d520a2f00176"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.17.0"
   fake_async:
     dependency: transitive
     description:
@@ -488,6 +496,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "6.5.2"
+  print_bluetooth_thermal:
+    dependency: "direct main"
+    description:
+      name: print_bluetooth_thermal
+      sha256: d97e21e2f59cdfab6868e3c2369b7dbb53aa77609064423c8ef9d18007bafc51
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.2.2"
   printing:
     dependency: "direct main"
     description:
@@ -797,6 +813,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "5.15.0"
+  win_ble:
+    dependency: transitive
+    description:
+      name: win_ble
+      sha256: "2a867e13c4b355b101fc2c6e2ac85eeebf965db34eca46856f8b478e93b41e96"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.1"
   xdg_directories:
     dependency: transitive
     description:
